@@ -1,8 +1,10 @@
-Client Exec
+Client Exec [![Client Exec Build Status][Build Icon]][Build Status]
 ===========
 A Ruby library for working with the [Client Exec API][].
 
 [Client Exec API]: http://www.clientexec.com/documentation/api/licensedefender.php
+[Build Status]: http://travis-ci.org/site5/client_exec
+[Build Icon]: https://secure.travis-ci.org/site5/client_exec.png?branch=master
 
 Install
 -------
