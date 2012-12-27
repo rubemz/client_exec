@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe ClientExec::Base do
   let(:base)                { ClientExec::Base.new }
-  let(:successful_response) { JSON.generate({ :error => "false" }) }
-  let(:bad_response)        { JSON.generate({ :error => "true" }) }
+  let(:successful_response) { JSON.generate({ 'error' => "false" }) }
+  let(:bad_response)        { JSON.generate({ 'error' => "true" }) }
 
   describe "#successful?" do
     context 'when response error is false' do
