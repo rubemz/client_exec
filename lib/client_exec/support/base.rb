@@ -34,8 +34,8 @@ module ClientExec
     def request(request_method, path, options = {})
       @conn.basic_auth ClientExec.config[:username],
                        ClientExec.config[:password]
-      response = @conn.send(request_method, path, {})
-      @success = (response.body['error'].to_s == 'false')
+      response = @conn.send(request_method, path, options)
+      @success = response.body.fetch("error", "false").to_s == 'false'
 
       response.body
     end

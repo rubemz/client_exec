@@ -8,7 +8,7 @@ module ClientExec
     # Returns a Hash that contains whether was a error or not and the
     # total of remaining domains (required)
     def add(domain)
-      request(:post, "/license/#{domain}")
+      request(:post, "license", "domain=#{domain}&")
     end
 
     # Public: Deletes a license from a reseller's allotment
@@ -18,7 +18,7 @@ module ClientExec
     #
     # Returns a Hash data from client exec api.
     def delete(domain)
-      request(:delete, "/license/#{domain}")
+      request(:delete, "license/#{domain}")
     end
 
     # Public: Returns information on a single license
@@ -27,7 +27,7 @@ module ClientExec
     #
     # Returns a Hash data from client exec api.
     def get(domain)
-      request(:get, "/license/#{domain}")
+      request(:get, "license/#{domain}")
     end
   end
 end
